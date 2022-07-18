@@ -91,7 +91,7 @@ def hit_or_stand(deck,hand):
 
     while True:
         try:
-            result =int (input("Do you want to Hit [1] or Stand [2]?"))
+            result =int (input("Do you want to Hit [1] or Stand [2]? "))
         except:
             print("Invalid input, try again")
         else:
@@ -132,6 +132,9 @@ def show_hands(player,dealer,hide=True):
         #check playa hand
         if index < len(player.cards):
             player_card = '[{}]'.format(str(player.cards[index]))
+        else:
+            player_card = " "
+
 
         print('{:19s}  {:15s}'.format( dealer_card, player_card))
 
